@@ -262,8 +262,14 @@
     #case-studies { padding: 6rem 0; }
     .case-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.8rem;
+    }
+    @media (max-width: 992px) {
+      .case-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 576px) {
+      .case-grid { grid-template-columns: 1fr; }
     }
     .case-card {
       background: var(--card-bg);
@@ -486,6 +492,8 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
   <!-- ── Case Studies ───────────────────────────────────────────── -->
   <section id="case-studies">
@@ -499,20 +507,20 @@
       </p>
 
       <div class="case-grid fade-up">
-      
-      <!-- Design 1 -->
-      <a href="your-link-here" class="case-card">
-        <div class="case-thumb case-thumb-1">
-          🏥
-        </div>
-        <div class="case-body">
-          <div class="case-tag">Design 1 · Service Site</div>
-          <div class="case-title">Local Service Website</div>
-          <p class="case-desc">
-            A professional website for a local physiotherapy business.
-          </p>
-        </div>
-      </a>
+
+        <!-- Design 1 -->
+        <a href="http://localhost:3000/#contact" target="_blank" rel="noopener noreferrer" class="case-card">
+          <div class="case-thumb case-thumb-1">
+            🏥
+          </div>
+          <div class="case-body">
+            <div class="case-tag">Design 1 · Service Site</div>
+            <div class="case-title">Back 2 It Physiotherapy</div>
+            <p class="case-desc">
+              A professional website for a local physiotherapy clinic — services, team, and online appointment booking.
+            </p>
+          </div>
+        </a>
 
         <!-- Design 2 -->
         <a href="coming-soon.html" class="case-card">
@@ -556,6 +564,7 @@
       </div>
     </div>
   </section>
+
   <!-- ── Footer ─────────────────────────────────────────────────── -->
   <footer>
     <p class="mb-1">Made for SEG3125 · University of Ottawa · 2026</p>
